@@ -369,22 +369,30 @@
       document.getElementById('noteWrap').style.display = 'block';
     }
     document.getElementById('labelTitle').textContent = todaySong.title;
-    document.getElementById('labelSub').textContent   = '— ' + todaySong.artist;
+    document.getElementById('labelSub').textContent = todaySong.artist ? '— ' + todaySong.artist : '';
 
     audio.src = todaySong.mp3;
-
     const spinReels = () => {
       document.getElementById('reelL').className = 'reel spin';
       document.getElementById('reelR').className = 'reel spin-slow';
     };
-
-    audio.play().then(spinReels).catch(() => {
-      cassette.addEventListener('click', function start() {
+    const stopReels = () => {
+      document.getElementById('reelL').className = 'reel';
+      document.getElementById('reelR').className = 'reel';
+    };
+    
+    // Try autoplay first
+    audio.play().then(spinReels).catch(() => {});
+    
+    // Toggle on every click
+    cassette.addEventListener('click', () => {
+      if (audio.paused) {
         audio.play().then(spinReels);
-        cassette.removeEventListener('click', start);
-      }, { once: true });
+      } else {
+        audio.pause();
+        stopReels();
+      }
     });
-
   } else {
     document.getElementById('noSong').style.display = 'block';
   }
