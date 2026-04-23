@@ -1,8 +1,8 @@
 # 📼 daily cassette
 
-A little thing i made for someone special.
+A little thing I made for someone special.
 
-Every day i'd open this file, add a song that reminded me of her that day,
+Every day I'd open this file, add a song that reminded me of her that day,
 and write a small note, a lyric, a feeling, whatever felt right.
 She'd open the page and find a vintage cassette showing that day's song,
 with the reels spinning when it played.
