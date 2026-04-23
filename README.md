@@ -8,7 +8,7 @@ She'd open the page and find a vintage cassette showing that day's song,
 with the reels spinning when it played.
 
 
-No framework, no backend. just a single html file i'd update and redeploy each morning.
+No framework, no backend. just a single html file I'd update and redeploy each morning.
 the whole point was the ritual of it — picking a song, writing two lines, and knowing
 she'd see it.
 
