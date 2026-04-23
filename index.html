@@ -267,19 +267,6 @@
       margin-left: 12px;
     }
 
-    .sparkle {
-      position: fixed;
-      bottom:18px; right:22px;
-      font-size: .9rem;
-      color: #f2e8d9;
-      opacity: .16;
-      animation: twinkle 4s ease-in-out infinite;
-    }
-    @keyframes twinkle {
-      0%,100% { opacity:.16; transform:scale(1); }
-      50%      { opacity:.35; transform:scale(1.2); }
-    }
-
     @keyframes fadeToMuted { to { opacity: .3;  transform: translateY(0); } }
     @keyframes fadeFull    { to { opacity: 1;   transform: translateY(0); } }
 
@@ -343,7 +330,6 @@
 
 </div>
 
-<div class="sparkle">✦</div>
 <audio id="audioEl" preload="auto" loop></audio>
 
 <script>
