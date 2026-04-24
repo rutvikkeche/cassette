@@ -325,8 +325,7 @@
     No song for today yet.<br>Come back tomorrow.
   </div>
 
-  <button class="past-btn" id="pastBtn" onclick="togglePast()" style="display:none">↑ past songs</button>
-  <div class="past-list" id="pastList"></div>
+
 
 </div>
 
@@ -397,17 +396,6 @@
     document.getElementById('noSong').style.display = 'block';
   }
 
-  if (pastSongs.length > 0) {
-    document.getElementById('pastBtn').style.display = 'inline-block';
-    const list = document.getElementById('pastList');
-    pastSongs.forEach(s => {
-      const div = document.createElement('div');
-      div.className = 'past-item';
-      const d = new Date(s.date + 'T00:00:00').toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
-      div.innerHTML = `<span>${s.title} <em style="opacity:.4;font-size:.86em">— ${s.artist}</em></span><span class="past-date">${d}</span>`;
-      list.appendChild(div);
-    });
-  }
 
   function togglePast() {
     const list = document.getElementById('pastList');
